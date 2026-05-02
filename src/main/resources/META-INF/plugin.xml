@@ -1,0 +1,18 @@
+<idea-plugin>
+    <id>org.example.aitestassistant</id>
+    <name>AI Test Assistant</name>
+    <vendor>Anwar</vendor>
+    <description>Detects failing tests and provides AI-powered root cause analysis.</description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow
+                id="AI Test Assistant"
+                anchor="bottom"
+                factoryClass="org.example.aitestassistant.ui.FailureToolWindowFactory"
+        />
+    </extensions>
+
+</idea-plugin>
