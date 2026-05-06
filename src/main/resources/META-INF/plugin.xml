@@ -15,4 +15,11 @@
         />
     </extensions>
 
+    <!-- Register listener for SMTRunnerEventsListener -->
+    <applicationListeners>
+        <listener
+                class="org.example.aitestassistant.listener.MySMTestListener"
+                topic="com.intellij.execution.testframework.sm.runner.SMTRunnerEventsListener"/>
+    </applicationListeners>
+
 </idea-plugin>
