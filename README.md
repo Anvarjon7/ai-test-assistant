@@ -7,7 +7,7 @@ root cause analysis automatically — no manual prompting needed.
 
 ## Demo
 
-![demo](docs/demo.gif)
+![demo-test](docs/ai-assistant-test-demo.gif)
 
 ---
 
