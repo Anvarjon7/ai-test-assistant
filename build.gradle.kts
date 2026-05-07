@@ -4,17 +4,25 @@ plugins {
     id("org.jetbrains.intellij") version "1.16.1"
 }
 
-group = "com.yourname"
+group = "org.example"
 version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
 }
 
+sourceSets {
+    main {
+        java {
+            srcDirs("src/main/java")
+        }
+    }
+}
+
 intellij {
     version.set("2023.3.2")
     type.set("IC")
-    plugins.set(listOf("java"))  // ← critical: gives access to test runner APIs
+    plugins.set(listOf("java"))
 }
 
 tasks {

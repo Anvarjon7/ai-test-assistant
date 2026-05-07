@@ -26,7 +26,7 @@ public class AiService {
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(API_URL + apiKey))
-                .header("Content-Type", "application.json")
+                .header("Content-Type", "application/json")
                 .POST(HttpRequest.BodyPublishers.ofString(requestBody))
                 .build();
 
@@ -52,11 +52,11 @@ public class AiService {
                 "{\n" +
                 " \"rootCause\": \"one sentence explanation\",\n" +
                 " \"explanation\": \"2-3 sentences in plain language\",\n" +
-                " \"suggestedFix\": \"concrete fix or code change\"n" +
+                " \"suggestedFix\": \"concrete fix or code change\"\n" +
                 "}";
     }
 
-    private String filterStacktrace(String stackTrace){
+    private String filterStacktrace(String stackTrace) {
         if (stackTrace == null || stackTrace.isBlank()) {
             return "No stack trace available";
         }
@@ -67,7 +67,7 @@ public class AiService {
                         && !line.contains("com.intellij")
                         && !line.contains("sun.reflect")
                         && !line.contains("java.lang.reflect"))
-                .reduce("", (a,b) -> a + "\n" + b)
+                .reduce("", (a, b) -> a + "\n" + b)
                 .trim();
     }
 

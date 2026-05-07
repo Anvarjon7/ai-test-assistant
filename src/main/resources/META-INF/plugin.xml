@@ -11,15 +11,9 @@
         <toolWindow
                 id="AI Test Assistant"
                 anchor="bottom"
+                doNotActivateOnStart="false"
                 factoryClass="org.example.aitestassistant.ui.FailureToolWindowFactory"
         />
     </extensions>
-
-    <!-- Register listener for SMTRunnerEventsListener -->
-    <applicationListeners>
-        <listener
-                class="org.example.aitestassistant.listener.MySMTestListener"
-                topic="com.intellij.execution.testframework.sm.runner.SMTRunnerEventsListener"/>
-    </applicationListeners>
 
 </idea-plugin>
